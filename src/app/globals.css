@@ -4,11 +4,10 @@
 
 :root {
   --background: #ffffff;
+  --nav-background: #197686;
   --foreground: #171717;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
