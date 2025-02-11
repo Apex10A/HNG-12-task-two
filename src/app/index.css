@@ -1,2 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Road+Rage&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://db.onlinewebfonts.com/c/1a5c2d8bbd4e28d99a6efcbb9a5b378f?family=JejuMyeongjo'); 
 
+.background {
+    background: radial-gradient(52.52% 32.71% at 50% 97.66%, rgba(36, 160, 181, 0.20) 0%, rgba(36, 160, 181, 0.00) 100%), #02191D;
+}
+.head{
+    background: rgba(5, 37, 44, 0.40);
+    backdrop-filter: blur(2px);
+}
+@font-face {
+    font-family: 'JejuMyeongjo';
+    src: url('../../font/JejuMyeongjo-Regular.ttf') format('truetype');
+    font-weight: thin;
+    font-style: normal;
+  }
+.text{
+    color: #B3B3B3;
+leading-trim: both;
+text-edge: cap;
+font-family: 'JejuMyeongjo';
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.btn{
+    border-radius: 12px;
+    font-family: 'JejuMyeongjo';
+border: 1px solid rgba(213, 234, 0, 0.10);
+background: #FFF;
+display: flex;
+padding: 16px 24px;
+gap: 8px;
+}
