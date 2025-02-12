@@ -14,15 +14,15 @@ export default function GeneratedTicket() {
   };
 
   return (
-    <div className='background w-full min-h-[130vh] pt-3'>
+    <div className='background px-[20px] md:px-0 w-full min-h-[130vh] pt-3'>
       <div>
-        <div className='absolute w-full z-20'>
+        <div className='md:absolute w-full z-20'>
           <Header/>
         </div>
-        <div className='max-w-[700px] h-full mx-auto mt-8 md:mt-16 px-4 md:px-10 py-5 bg-[#041E23] border-[1px] border-[#0E464F] rounded-[20px] md:rounded-[40px] flex flex-col relative top-0'>
-          <div className='flex items-center justify-between mb-3 md:mb-[12px] px-4'>
-            <h1 className='text-white text-lg md:text-xl'>Ready</h1>
-            <p className='text-white'>Step 2/3</p>
+        <div className='max-w-[700px] h-full mx-auto mt-[48px] md:mt-16 px-[24px] md:px-10 py-[32px] bg-[#041E23] border-[1px] border-[#0E464F] rounded-[20px] md:rounded-[40px] flex flex-col relative top-0'>
+          <div className='flex items-center justify-between ticket-selection mb-3 md:mb-[12px]'>
+            <h1 className='text-white text-[24px] pb-[12px] md:pb-0 md:text-xl'>Ready</h1>
+            <p className='text-white'>Step 3/3</p>
           </div>
 
           {/* Progress Bar */}
