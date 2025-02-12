@@ -14,15 +14,15 @@ export default function GeneratedTicket() {
   };
 
   return (
-    <div className='background px-[20px] md:px-0 w-full min-h-[130vh] pt-3'>
+    <div className='background px-[20px] md:px-0 w-full min-h-[130vh] pt-3 pb-3'>
       <div>
         <div className='md:absolute w-full z-20'>
           <Header/>
         </div>
-        <div className='max-w-[700px] h-full mx-auto mt-[48px] md:mt-16 px-[24px] md:px-10 py-[32px] bg-[#041E23] border-[1px] border-[#0E464F] rounded-[20px] md:rounded-[40px] flex flex-col relative top-0'>
+        <div className='max-w-[700px] mx-auto mt-[48px] md:mt-16 px-[24px] md:px-10 py-[32px] bg-[#041E23] border-[1px] border-[#0E464F] rounded-[20px] md:rounded-[40px] flex flex-col relative top-0'>
           <div className='flex items-center justify-between ticket-selection mb-3 md:mb-[12px]'>
             <h1 className='text-white text-[24px] pb-[12px] md:pb-0 md:text-xl'>Ready</h1>
-            <p className='text-white'>Step 3/3</p>
+            <p className='text-white font-["Roboto"]'>Step 3/3</p>
           </div>
 
           {/* Progress Bar */}
@@ -41,12 +41,12 @@ export default function GeneratedTicket() {
               <Shape className="w-full h-[600px]" />
               <div className='absolute inset-0 flex justify-center pt-[24px] items-start'>
                 <div className='text-center border border-[#24A0B5] rounded-[16px] w-[260px] h-[446px] pt-[14px]'>
-                  <h1 className='text-[#FAFAFA] font-["Road_Rage"] text-[34px] md:text-[42px] font-normal leading-none'>
+                  <h1 className='text-[#FAFAFA] font-["Road_Rage"] text-[34px] md:text-[42px] font-normal leading-none pb-2'>
                     Techember Fest "25
                   </h1>
-                  <p className='locate'>📍 04 Rumens road, Ikoyi, Lagos</p>
+                  <p className='locate pb-1'>📍 04 Rumens road, Ikoyi, Lagos</p>
                   <p className='locate'>📅 March 15, 2025 | 7:00 PM</p>
-                  <div className='image w-[140px] h-[140px] mx-auto'>
+                  <div className='image my-[20px] w-[140px] h-[140px] mx-auto'>
                     {formData.avatarUrl ? (
                       <img
                         src={formData.avatarUrl}
@@ -61,21 +61,21 @@ export default function GeneratedTicket() {
                   </div>
 
                   {/* Updated field section with new flex layout and cross divider */}
-                  <div className='field space-y-4 px-4'>
+                  <div className='field mx-[14px] p-[8px]'>
                     {/* Name and Email section - flexed horizontally */}
                     <div className='flex justify-between gap-2'>
                       <div className='flex-1 text-left'>
-                        <p className='opacity-30 text-[14px] entere'>Enter your name</p>
-                        <p className='name'>{formData.fullName}</p>
+                        <p className='opacity-30 text-[14px] entere pb-[4px] font-["Roboto"]'>Enter your name</p>
+                        <p className='name font-["Roboto"] pb-[4px]'>{formData.fullName}</p>
                       </div>
                       <div className='flex-1 text-left'>
-                        <p className='opacity-30 text-[14px] entere'>Enter your Email *</p>
-                        <p className='break-words name'>{formData.email}</p>
+                        <p className='opacity-30 text-[14px] entere font-[400] pb-[4px] font-["Roboto"]'>Enter your Email *</p>
+                        <p className='break-words name font-["Roboto"] pb-[4px]'>{formData.email}</p>
                       </div>
                     </div>
 
                     {/* Cross divider */}
-                    <div className='relative'>
+                    <div className='relative '>
                       <div className='absolute w-full h-px bg-[#24A0B5] opacity-30 top-1/2 transform -translate-y-1/2'></div>
                       <div className='absolute h-full w-px bg-[#24A0B5] opacity-30 left-1/2 transform -translate-x-1/2'></div>
                     </div>
@@ -83,34 +83,34 @@ export default function GeneratedTicket() {
                     {/* Ticket section - flexed horizontally */}
                     <div className='flex justify-between gap-2'>
                       <div className='flex-1 text-left'>
-                        <p className='opacity-30 text-[14px] entere'>Ticket Type:</p>
-                        <p className='name'>{formData.ticketType}</p>
+                        <p className='opacity-30 text-[14px] entere font-[400] pb-[4px] pt-[4px] font-["Roboto"]'>Ticket Type:</p>
+                        <p className='name font-["Roboto"]'>{formData.ticketType}</p>
                       </div>
                       <div className='flex-1 text-left'>
-                        <p className='opacity-30 entere text-[14px]'>Ticket for :</p>
-                        <p className='name'>{formData.numberOfTickets}</p>
+                        <p className='opacity-30 text-[14px] entere font-[400] pb-[4px] pt-[4px] font-["Roboto"]'>Ticket for :</p>
+                        <p className='name font-["Roboto"]'>{formData.numberOfTickets}</p>
                       </div>
                     </div>
-                    <div className='flex-1 text-left'>
-                    <p className='entere opacity-30'>special request</p>
-                    <p className='nil'>{formData.specialRequirements}</p>
+                    <div className='flex-1 text-left pt-[8px]'>
+                    <p className='opacity-30 text-[14px] entere font-[400] pb-[4px] font-["Roboto"]'>special request</p>
+                    <p className='nil font-["Roboto"] font-[400] leading-8 text-[10px]'>{formData.specialRequirements}</p>
                   </div>
                   </div>
-                  <div className='absolute flex flex-col items-center justify-center mx-auto bottom-5'>
-                  <img src="/Bar code.svg" alt="" className='mx-auto flex' />
+                  <div className='absolute flex flex-col items-center justify-center mx-auto bottom-5 '>
+                  <img src="/Bar code.svg" alt="" className='mx-auto flex items-center justify-center relative bottom-0 ml-3' />
                 </div>
                 </div>
               </div>
             </div>
-            <div className='flex gap-4 mt-6'>
+            <div className='flex flex-col-reverse md:flex-row gap-4 mt-[56px] mb-[48px]'>
         <button 
           onClick={() => goToPreviousStep(3)}
-          className='flex-1 border border-[#24A0B5] rounded-lg py-3 text-[#24A0B5]'
+          className='flex-1 border border-[#24A0B5] rounded-lg py-3 text-[#24A0B5] font-["JejuMyeongjo"] font-[400] text-[16px]'
         >
           Book Another Ticket
         </button>
         <button 
-          className='flex-1 bg-[#24A0B5] rounded-lg py-3 text-white'
+          className='flex-1 bg-[#24A0B5] rounded-lg py-3 text-white font-["JejuMyeongjo"] font-[400] text-[16px]'
           onClick={() => window.print()}
         >
           Download Ticket

@@ -110,7 +110,7 @@ export default function AttendeeDetails() {
         {/* Header Section */}
         <div className='flex items-center justify-between ticket-selection mb-3 md:mb-[12px]'>
           <h1 className='text-white text-lg md:text-xl'>Attendee Details</h1>
-          <p className='text-white'>Step 2/3</p>
+          <p className='text-white font-["Roboto"]'>Step 2/3</p>
         </div>
 
         {/* Progress Bar */}
@@ -173,7 +173,7 @@ export default function AttendeeDetails() {
             <div className='space-y-6 w-full max-w-[600px] mx-auto'>
               {/* Name Input */}
               <div className='space-y-2'>
-                <label htmlFor="name" className='text-[#FAFAFA] block'>
+                <label htmlFor="name" className='text-[#FAFAFA] block font-["Roboto"]'>
                   Enter your name
                 </label>
                 <input
@@ -184,17 +184,17 @@ export default function AttendeeDetails() {
                   aria-label="Full name"
                   aria-required="true"
                   aria-invalid={!!errors.fullName}
-                  className='w-full bg-transparent text-[#FAFAFA] border border-[#07373F] rounded-lg p-3'
+                  className='w-full bg-transparent text-[#FAFAFA] border border-[#07373F] rounded-lg p-3 font-["Roboto"]'
                   placeholder="Enter your full name"
                 />
                 {errors.fullName && (
-                  <p className="text-red-500 text-sm mt-1" role="alert">{errors.fullName}</p>
+                  <p className="text-red-500 text-sm mt-1 font-['Roboto']" role="alert">{errors.fullName}</p>
                 )}
               </div>
 
               {/* Email Input */}
               <div className='space-y-2'>
-                <label htmlFor="email" className='text-[#FAFAFA] block'>
+                <label htmlFor="email" className='text-[#FAFAFA] block font-["Roboto"]'>
                   Enter your email *
                 </label>
                 <input
@@ -205,11 +205,11 @@ export default function AttendeeDetails() {
                   aria-label="Email address"
                   aria-required="true"
                   aria-invalid={!!errors.email}
-                  className='w-full bg-transparent text-[#FAFAFA] border border-[#07373F] rounded-lg p-3'
+                  className='w-full bg-transparent text-[#FAFAFA] border border-[#07373F] rounded-lg p-3 font-["Roboto"]'
                   placeholder="Enter your email"
                 />
                 {errors.email && (
-                  <p className="text-red-500 text-sm mt-1" role="alert">{errors.email}</p>
+                  <p className="text-red-500 text-sm font-['Roboto'] mt-1" role="alert">{errors.email}</p>
                 )}
               </div>
 
@@ -224,25 +224,25 @@ export default function AttendeeDetails() {
                   value={formData.specialRequirements}
                   onChange={handleInputChange}
                   rows={4}
-                  className='w-full bg-transparent text-[#FAFAFA] border border-[#07373F] rounded-lg p-3 md:p-4 focus:outline-none focus:border-[#24A0B5] resize-none'
+                  className='w-full bg-transparent text-[#FAFAFA] border border-[#07373F] rounded-lg p-3 md:p-4 focus:outline-none focus:border-[#24A0B5] resize-none font-["Roboto"]'
                   placeholder='Textarea'
                 />
               </div>
             </div>
 
             {/* Footer Buttons */}
-            <div className='flex gap-4 mt-6'>
+            <div className='flex flex-col-reverse md:flex-row gap-4 mt-6'>
               <button 
                 onClick={() => goToPreviousStep(2)}
                 disabled={isSubmitting}
-                className='flex-1 border border-[#24A0B5] rounded-lg py-3 text-[#24A0B5] disabled:opacity-50 disabled:cursor-not-allowed'
+                className='flex-1 border border-[#24A0B5] rounded-lg py-3 text-[#24A0B5] disabled:opacity-50 font-["JejuMyeongjo"] font-[400] text-[16px]disabled:cursor-not-allowed'
               >
                 Back
               </button>
               <button 
                 onClick={handleNext}
                 disabled={isSubmitting}
-                className='flex-1 bg-[#24A0B5] rounded-lg py-3 text-white disabled:opacity-50 disabled:cursor-not-allowed'
+                className='flex-1 bg-[#24A0B5] rounded-lg py-3 text-white disabled:opacity-50 font-["JejuMyeongjo"] font-[400] text-[16px]disabled:cursor-not-allowed'
               >
                 {isSubmitting ? 'Processing...' : 'Next'}
               </button>
