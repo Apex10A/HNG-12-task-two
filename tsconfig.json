@@ -28,7 +28,7 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "src/app/ready-page/page.jsx", "src/app/ticket-selection/page.jsx"  ],
   "exclude": [
     "node_modules"
   ]
