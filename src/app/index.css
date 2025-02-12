@@ -178,3 +178,8 @@ font-style: normal;
 font-weight: 400;
 line-height: 150%; /* 21px */
 }
+.bge{
+    border-radius: 32px;
+background: rgba(36, 160, 181, 0.50);
+
+}
