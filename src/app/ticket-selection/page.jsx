@@ -104,9 +104,9 @@ export default function AttendeeDetails() {
   }
 
   return (
-    <div className='background w-full min-h-[130vh] pt-3'>
+    <div className='background px-[20px] md:px-0 w-full min-h-[130vh] pt-3'>
       <Header/>
-      <div className='max-w-[700px] mx-auto h-full md:px-[48px] px-10 py-[48px] bg-[#041E23] border-[1px] border-[#0E464F] rounded-[20px] md:rounded-[40px] flex flex-col'>
+      <div className='max-w-[700px] mx-auto mt-[32px] h-full md:px-[48px] px-10 py-[48px] bg-[#041E23] border-[1px] border-[#0E464F] rounded-[20px] md:rounded-[40px] flex flex-col'>
         {/* Header Section */}
         <div className='flex items-center justify-between ticket-selection mb-3 md:mb-[12px]'>
           <h1 className='text-white text-lg md:text-xl'>Attendee Details</h1>
@@ -120,12 +120,12 @@ export default function AttendeeDetails() {
         </div>
 
         {/* Main Content Container */}
-        <div className='rounded-[16px] md:rounded-[32px] border border-[#0E464F] bg-[#08252B] flex-1'>
-          <div className='p-6 md:p-8 flex flex-col gap-8'>
+        <div className='rounded-[16px] md:rounded-[32px] md:border md:border-[#0E464F] md:bg-[#08252B] flex-1'>
+          <div className=' md:p-8 flex flex-col gap-8'>
             {/* Profile Image Upload Section */}
-            <div className='bg-[#052228] border border-[#07373F] rounded-[24px] p-6 md:p-8'>
+            <div className='bg-[#052228] border border-[#07373F] h-[328px] md:h-auto rounded-[24px] p-6 md:p-8 w-full'>
               <h2 className='text-white text-lg mb-6'>Upload Profile Photo</h2>
-              <div className='flex justify-center items-center h-[200px] dark py-[16px]'>
+              <div className='flex justify-center items-center h-[200px] md:bg-[#041B20] py-[16px]'>
                 <div className='flex justify-center items-center min-h-[240px]'>
                   <div 
                     onClick={triggerFileInput}

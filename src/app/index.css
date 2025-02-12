@@ -30,7 +30,6 @@ line-height: normal;
 border: 1px solid rgba(213, 234, 0, 0.10);
 background: #FFF;
 display: flex;
-padding: 16px 24px;
 gap: 8px;
 }
 .ticket-selection{
@@ -183,3 +182,26 @@ line-height: 150%; /* 21px */
 background: rgba(36, 160, 181, 0.50);
 
 }
+select {
+    /* Change background of the dropdown options */
+    background-color: #041E23;
+    /* Add padding to prevent text from overlapping with the arrow */
+    padding-right: 40px !important;
+    /* Custom dropdown arrow */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23FAFAFA' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    /* Remove default arrow */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+  
+  /* Change background color of options */
+  select option {
+    background-color: #041E23;
+    color: #FAFAFA;
+  }
+  select:focus{
+    border: #02191D;
+  }

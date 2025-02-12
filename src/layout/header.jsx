@@ -11,8 +11,8 @@ const Header = () => {
   };
 
   return (
-    <div className="border-[#197686] h-[76px] border-[1px] rounded-[24px] max-w-[1200px] mx-auto head relative">
-      <div className="flex justify-between items-center h-full px-8">
+    <div className="border-[#197686] border-[1px] rounded-[12px] md:rounded-[24px] max-w-[1200px] head relative mx-auto">
+      <div className="flex justify-between items-center h-full py-[12px] px-[16px]">
         {/* Logo */}
         <div className="flex items-center space-x-2">
           <img src="thumb.svg" alt="Logo" className="h-8 w-auto" />
@@ -30,7 +30,7 @@ const Header = () => {
 
         <div className="flex items-center">
           {/* Button */}
-          <button className="btn uppercase flex items-center gap-2">
+          <button className="btn uppercase flex text-[14px] md:text-[16px] items-center gap-2 px-[16px] py-[12px] md:px-[24px] md:py-[16px]">
             My Tickets 
             <Line />
           </button>

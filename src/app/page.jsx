@@ -1,12 +1,12 @@
 "use client"
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './index.css'
 import Header from '../layout/header'
 import { useTicketForm } from '../hooks/useTicketForm'
 
 export default function Homer() {
   const { formData, handleInputChange, errors, goToNextStep } = useTicketForm()
-  const [selectedTicket, setSelectedTicket] = useState(formData.ticketType || '')
+  const [selectedTicket, setSelectedTicket] = useState(formData.ticketType || null)
 
   const ticketTypes = [
     { type: 'regular', price: 'Free', name: 'Regular Access', available: '20/52' },
@@ -23,6 +23,11 @@ export default function Homer() {
       }
     })
   }
+  useEffect(() => {
+    if (formData.ticketType) {
+      setSelectedTicket(formData.ticketType)
+    }
+  }, [formData.ticketType])
 
   const handleNext = () => {
     if (!selectedTicket) {
@@ -39,12 +44,12 @@ export default function Homer() {
   }
 
   return (
-    <div className='background w-full min-h-[130vh] pt-3'>
+    <div className='background px-[20px] md:px-0 w-full min-h-[130vh] pt-3'>
       <Header/>
-      <div className='max-w-[700px] mx-auto mt-8 md:mt-16 md:px-[48px] px-10 py-[48px] h-full bg-[#041E23] border-[1px] border-[#0E464F] rounded-[20px] md:rounded-[40px]'>
-        <div className='flex items-center justify-between ticket-selection mb-3 md:mb-[12px]'>
-          <h1 className='text-white text-lg md:text-xl'>Ticket Selection</h1>
-          <p className='text-white'>Step 1/3</p>
+      <div className='max-w-[700px] mx-auto mt-8 md:mt-16 md:px-[48px] px-10 pt-[48px] h-full bg-[#041E23] border-[1px] border-[#0E464F] rounded-[20px] md:rounded-[40px]'>
+        <div className='md:flex items-center justify-between ticket-selection mb-3 md:mb-[12px]'>
+          <h1 className='text-white text-[24px] pb-[12px] md:pb-0 md:text-xl'>Ticket Selection</h1>
+          <p className='text-white font-["Roboto"] font-[400] text-[16px]'>Step 1/3</p>
         </div>
 
         {/* Progress Bar */}
@@ -54,14 +59,14 @@ export default function Homer() {
         </div>
 
         {/* Event Card Container */}
-        <div className='rounded-[16px] md:rounded-[32px] w-full border border-[#0E464F] bg-[#08252B] pt-6 md:pt-[24px] flex flex-col gap-6 md:gap-8 mb-6 md:mb-8'>
-          <div className='mx-4 md:mx-[24px]'>
+        <div className='rounded-[16px] md:rounded-[32px] w-full md:border md:border-[#0E464F] md:bg-[#08252B] pt-6 md:pt-[24px] flex flex-col gap-6 md:gap-8 mb-6 md:mb-[48px]'>
+          <div className='md:mx-[24px]'>
             {/* Event Details Section */}
-            <div className='rounded-[20px] md:rounded-[24px] border-r-2 border-b-2 border-l-2 border-[#07373F] h-auto md:h-[200px] p-4 md:py-6 flex flex-col items-center gap-2 bg'>
-              <h1 className='text-[#FAFAFA] text-center font-["Road_Rage"] text-4xl md:text-[62px] font-normal leading-none'>
+            <div className='rounded-[20px] md:rounded-[24px] border-r-2 border-b-2 border-l-2 border-[#07373F] h-[243px] md:h-[200px] p-4 md:py-6 flex flex-col items-center gap-2 bg'>
+              <h1 className='text-[#FAFAFA] text-center font-["Road_Rage"] text-[48px] md:text-[62px] font-normal leading-none'>
                 Techember Fest "25
               </h1>
-              <p className='text-[#FAFAFA] text-center font-roboto text-sm md:text-base font-normal leading-[150%] w-full md:max-w-[60%] join'>
+              <p className='text-[#FAFAFA] text-center font-roboto text-[14px] md:text-base font-normal leading-[150%] w-full md:max-w-[60%] join'>
                 Join us for an unforgettable experience at [Event Name]! Secure your spot now.
               </p>
               <div className='flex flex-col md:flex-row gap-2 md:gap-3 items-center text-center md:text-left'>
@@ -83,16 +88,16 @@ export default function Homer() {
             {/* Ticket Selection Section */}
             <div>
               <h2 className='select mb-4'>Select Ticket Type:</h2>
-              <div className='h-auto min-h-[142px] w-full bg-[#052228] border border-[#07373F] rounded-[24px] grid grid-cols-2 lg:grid-cols-3 items-center p-[16px] gap-[16px] md:gap-[16px]'>
+              <div className='h-auto min-h-[142px] w-full bg-[#052228] border border-[#07373F] rounded-[24px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center p-[16px] gap-[16px] md:gap-[16px]'>
                 {ticketTypes.map((ticket) => (
                   <div
                     key={ticket.type}
                     onClick={() => handleTicketSelect(ticket.type)}
-                    className={`cursor-pointer border ${
+                    className={`cursor-pointer border  ${
                       selectedTicket === ticket.type
                         ? 'border-[#197686] bg-[#12464E]'
                         : 'border-[#197686] bg-transparent hover:bg-[#12464E]/50'
-                    } rounded-[12px] p-[12px] w-[158px] h-[110px] transition-colors`}
+                    } rounded-[12px] p-[12px] w-full md:w-[158px] h-[110px] transition-colors`}
                   >
                     <p className='free'>{ticket.price}</p>
                     <p className='uppercase reg pt-[12px]'>{ticket.name}</p>
@@ -114,7 +119,7 @@ export default function Homer() {
               value={formData.numberOfTickets}
               onChange={handleInputChange}
               aria-label="Number of tickets"
-              className='w-full bg-transparent text-[#FAFAFA] border border-[#07373F] p-[12px] rounded-[12px]'
+              className='w-full bg-transparent font-["Roboto"] text-[#FAFAFA] border border-[#07373F] p-[12px] rounded-[12px]  focus:outline-none focus:border-[#24A0B5] focus:ring-1 focus:ring-[#24A0B5]'
             >
               {[1, 2, 3, 4, 5].map(num => (
                 <option key={num} value={num}>{num}</option>
@@ -126,14 +131,14 @@ export default function Homer() {
           <div className='flex gap-4 px-[24px] pb-[24px]'>
             <button 
               onClick={() => window.location.href = '/'}
-              className='flex-1 bg-transparent border border-[#24A0B5] rounded-lg py-3 text-[#24A0B5]'
+              className='flex-1 bg-transparent border border-[#24A0B5] rounded-lg py-3 text-[#24A0B5] font-["JejuMyeongjo"] font-[400] text-[16px]'
             >
               Cancel
             </button>
             <button 
               onClick={handleNext}
-              className='flex-1 bg-[#24A0B5] rounded-lg py-3 text-white disabled:opacity-50 disabled:cursor-not-allowed'
-              disabled={!selectedTicket}
+              className='flex-1 bg-[#24A0B5] rounded-lg py-3 text-white disabled:opacity-50 font-["JejuMyeongjo"] font-[400] text-[16px]'
+              // disabled={selectedTicket === null || selectedTicket === ''}
             >
               Next
             </button>
