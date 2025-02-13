@@ -13,7 +13,12 @@ export default function GeneratedTicket() {
     width: typeof window !== 'undefined' ? window.innerWidth : 0,
     height: typeof window !== 'undefined' ? window.innerHeight : 0
   })
-
+  const truncateText = (text, maxLength) => {
+    if (text && text.length > maxLength) {
+      return text.substring(0, maxLength) + '...';
+    }
+    return text;
+  };
   useEffect(() => {
     const handleResize = () => {
       setWindowDimensions({
@@ -105,23 +110,23 @@ export default function GeneratedTicket() {
                   {/* Updated field section with new flex layout and cross divider */}
                   <div className='field mx-[14px] p-[8px]'>
                     {/* Name and Email section - flexed horizontally */}
-                    <div className='flex justify-between gap-2'>
+                    <div className='flex justify-between items-center'>
                       <div className='flex-1 text-left'>
                         <p className='opacity-30 text-[14px] entere pb-[4px] font-["Roboto"]'>Enter your name</p>
-                        <p className='name font-["Roboto"] pb-[4px]'>{formData.fullName}</p>
+                        <p className='name font-["Roboto"] pb-[4px]'>{truncateText(formData.fullName, 12)}</p>
                       </div>
                       <div className='flex-1 text-left'>
                         <p className='opacity-30 text-[14px] entere font-[400] pb-[4px] font-["Roboto"]'>Enter your Email *</p>
-                        <p className='break-words name font-["Roboto"] pb-[4px]'>{formData.email}</p>
+                        <p className='break-words name font-["Roboto"] pb-[4px]'> {truncateText(formData.email, 9)}</p>
                       </div>
                     </div>
 
-                    {/* Cross divider */}
-                    <div className='relative '>
-                      <div className='absolute w-full h-px bg-[#24A0B5] opacity-30 top-1/2 transform -translate-y-1/2'></div>
-                      <div className='absolute h-full w-px bg-[#24A0B5] opacity-30 left-1/2 transform -translate-x-1/2'></div>
-                    </div>
-
+                   {/* Cross divider */}
+<div className='relative '> {/* Added specific height */}
+  <div className='absolute w-full h-px bg-[#24A0B5] opacity-30 top-1/2 transform -translate-y-1/2'></div>
+  <div className='absolute h-[82px] top-[-40px] w-px bg-[#24A0B5] opacity-30 left-[45%] transform -translate-x-1/2'></div>
+  <div className='absolute w-full h-px bg-[#24A0B5] opacity-30 top-[42px] transform -translate-y-1/2'></div>
+</div>
                     {/* Ticket section - flexed horizontally */}
                     <div className='flex justify-between gap-2'>
                       <div className='flex-1 text-left'>
@@ -138,6 +143,8 @@ export default function GeneratedTicket() {
                       <p className='nil font-["Roboto"] font-[400] leading-8 text-[10px]'>{formData.specialRequirements}</p>
                     </div>
                   </div>
+
+                  
                   <div className='absolute flex flex-col items-center justify-center mx-auto bottom-5 '>
                     <img src="/BarCode.svg" alt="" className='mx-auto flex items-center justify-center relative bottom-0 ml-3' />
                   </div>
