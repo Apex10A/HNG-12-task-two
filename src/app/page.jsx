@@ -44,8 +44,7 @@ export default function Homer() {
   }
 
   return (
-    <div className='background px-[20px] md:px-0 w-full min-h-[130vh] pt-3'>
-      <Header/>
+    <div className='pb-[24px] px-[20px] md:px-auto'>
       <div className='max-w-[700px] mx-auto mt-8 md:mt-16 md:px-[48px] px-10 pt-[48px] h-full bg-[#041E23] border-[1px] border-[#0E464F] rounded-[20px] md:rounded-[40px]'>
         <div className='md:flex items-center justify-between ticket-selection mb-3 md:mb-[12px]'>
           <h1 className='text-white text-[24px] pb-[12px] md:pb-0 md:text-xl'>Ticket Selection</h1>

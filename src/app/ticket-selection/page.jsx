@@ -104,8 +104,7 @@ export default function AttendeeDetails() {
   }
 
   return (
-    <div className='background px-[20px] md:px-0 w-full min-h-[130vh] pt-3'>
-      <Header/>
+    <div className='pb-[24px] px-[20px] md:px-auto'>
       <div className='max-w-[700px] mx-auto mt-[32px] h-full md:px-[48px] px-10 py-[48px] bg-[#041E23] border-[1px] border-[#0E464F] rounded-[20px] md:rounded-[40px] flex flex-col'>
         {/* Header Section */}
         <div className='flex items-center justify-between ticket-selection mb-3 md:mb-[12px]'>
