@@ -93,7 +93,7 @@ export default function GeneratedTicket() {
                   </h1>
                   <p className='locate pb-1'>📍 04 Rumens road, Ikoyi, Lagos</p>
                   <p className='locate'>📅 March 15, 2025 | 7:00 PM</p>
-                  <div className='image my-[20px] w-[140px] h-[140px] mx-auto'>
+                  <div className='image mt-[20px] my-[14px] w-[140px] h-[140px] mx-auto'>
                     {formData.avatarUrl ? (
                       <img
                         src={formData.avatarUrl}
@@ -108,7 +108,7 @@ export default function GeneratedTicket() {
                   </div>
 
                   {/* Updated field section with new flex layout and cross divider */}
-                  <div className='field mx-[14px] p-[8px]'>
+                  <div className='field min-h-[160px] mx-[14px] p-[8px] mb-[14px]'>
                     {/* Name and Email section - flexed horizontally */}
                     <div className='flex justify-between items-center'>
                       <div className='flex-1 text-left'>
@@ -117,7 +117,7 @@ export default function GeneratedTicket() {
                       </div>
                       <div className='flex-1 text-left'>
                         <p className='opacity-30 text-[14px] entere font-[400] pb-[4px] font-["Roboto"]'>Enter your Email *</p>
-                        <p className='break-words name font-["Roboto"] pb-[4px]'> {truncateText(formData.email, 9)}</p>
+                        <p className='break-words name font-["Roboto"] pb-[4px]'> {truncateText(formData.email, 13)}</p>
                       </div>
                     </div>
 
