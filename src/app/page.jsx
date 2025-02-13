@@ -44,8 +44,7 @@ export default function Homer() {
   }
 
   return (
-    <div className='background px-[20px] md:px-0 w-full min-h-[130vh] pt-3'>
-      <Header/>
+    <div className='pb-[24px] px-[20px] md:px-auto'>
       <div className='max-w-[700px] mx-auto mt-8 md:mt-16 md:px-[48px] px-10 pt-[48px] h-full bg-[#041E23] border-[1px] border-[#0E464F] rounded-[20px] md:rounded-[40px]'>
         <div className='md:flex items-center justify-between ticket-selection mb-3 md:mb-[12px]'>
           <h1 className='text-white text-[24px] pb-[12px] md:pb-0 md:text-xl'>Ticket Selection</h1>
@@ -99,8 +98,8 @@ export default function Homer() {
                         : 'border-[#197686] bg-transparent hover:bg-[#12464E]/50'
                     } rounded-[12px] p-[12px] w-full md:w-[158px] h-[110px] transition-colors`}
                   >
-                    <p className='free'>{ticket.price}</p>
-                    <p className='uppercase reg pt-[12px]'>{ticket.name}</p>
+                    <p className='free font-["Roboto"]'>{ticket.price}</p>
+                    <p className='uppercase reg pt-[12px] font-["Roboto"]'>{ticket.name}</p>
                     <p className='num'>{ticket.available}</p>
                   </div>
                 ))}
@@ -128,21 +127,21 @@ export default function Homer() {
           </div>
 
           {/* Action Buttons */}
-          <div className='flex gap-4 px-[24px] pb-[24px]'>
-            <button 
-              onClick={() => window.location.href = '/'}
-              className='flex-1 bg-transparent border border-[#24A0B5] rounded-lg py-3 text-[#24A0B5] font-["JejuMyeongjo"] font-[400] text-[16px]'
-            >
-              Cancel
-            </button>
-            <button 
-              onClick={handleNext}
-              className='flex-1 bg-[#24A0B5] rounded-lg py-3 text-white disabled:opacity-50 font-["JejuMyeongjo"] font-[400] text-[16px]'
-              // disabled={selectedTicket === null || selectedTicket === ''}
-            >
-              Next
-            </button>
-          </div>
+          <div className='flex flex-col-reverse md:flex-row gap-4 px-[24px] pb-[24px]'>
+  <button 
+    onClick={() => window.location.href = '/'}
+    className='w-full md:flex-1 bg-transparent border border-[#24A0B5] rounded-lg py-3 text-[#24A0B5] font-["JejuMyeongjo"] font-[400] text-[16px]'
+  >
+    Cancel
+  </button>
+  <button 
+    onClick={handleNext}
+    className='w-full md:flex-1 bg-[#24A0B5] rounded-lg py-3 text-white disabled:opacity-50 font-["JejuMyeongjo"] font-[400] text-[16px]'
+    // disabled={selectedTicket === null || selectedTicket === ''}
+  >
+    Next
+  </button>
+</div>
         </div>
       </div>
     </div>
