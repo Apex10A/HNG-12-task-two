@@ -105,10 +105,10 @@ export default function AttendeeDetails() {
 
   return (
     <div className='pb-[24px] px-[20px] md:px-auto'>
-      <div className='max-w-[700px] mx-auto mt-[32px] h-full md:px-[48px] px-10 py-[48px] bg-[#041E23] border-[1px] border-[#0E464F] rounded-[20px] md:rounded-[40px] flex flex-col'>
+      <div className='max-w-[700px] mx-auto mt-[32px] h-full md:px-[48px] px-[24px] py-[32px] bg-[#041E23] border-[1px] border-[#0E464F] rounded-[20px] md:rounded-[40px] flex flex-col'>
         {/* Header Section */}
-        <div className='flex items-center justify-between ticket-selection mb-3 md:mb-[12px]'>
-          <h1 className='text-white text-lg md:text-xl'>Attendee Details</h1>
+        <div className='flex items-end justify-between ticket-selection mb-3 md:mb-[12px]'>
+          <h1 className='text-white text-[24px] md:text-xl'>Attendee Details</h1>
           <p className='text-white font-["Roboto"]'>Step 2/3</p>
         </div>
 
@@ -119,11 +119,11 @@ export default function AttendeeDetails() {
         </div>
 
         {/* Main Content Container */}
-        <div className='rounded-[16px] md:rounded-[32px] md:border md:border-[#0E464F] md:bg-[#08252B] flex-1'>
-          <div className=' md:p-8 flex flex-col gap-8'>
+        <div className='rounded-[16px] md:rounded-[32px] md:border md:border-[#0E464F] md:bg-[#08252B] flex-1 '>
+          <div className=' md:p-8 pt-[24px] flex flex-col gap-8'>
             {/* Profile Image Upload Section */}
-            <div className='bg-[#052228] border border-[#07373F] h-[328px] md:h-auto rounded-[24px] p-6 md:p-8 w-full'>
-              <h2 className='text-white text-lg mb-6'>Upload Profile Photo</h2>
+            <div className='bg-[#052228] border border-[#07373F] h-[328px] rounded-[24px] p-6 md:p-8 w-full'>
+              <h2 className='text-white text-lg mb-[32px]'>Upload Profile Photo</h2>
               <div className='flex justify-center items-center h-[200px] md:bg-[#041B20] py-[16px]'>
                 <div className='flex justify-center items-center min-h-[240px]'>
                   <div 
