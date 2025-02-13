@@ -63,7 +63,7 @@ export default function GeneratedTicket() {
         </div>
         <div className='max-w-[700px] mx-auto mt-[48px] md:mt-16 px-[24px] md:px-10 py-[32px] bg-[#041E23] border-[1px] border-[#0E464F] rounded-[20px] md:rounded-[40px] flex flex-col relative top-0'>
           <div className='flex items-center justify-between ticket-selection mb-3 md:mb-[12px]'>
-            <h1 className='text-white text-[24px] pb-[12px] md:pb-0 md:text-xl'>Ready</h1>
+            <h1 className='text-white text-[24px] pb-[12px] md:pb-0 md:text-[32px]'>Ready</h1>
             <p className='text-white font-["Roboto"]'>Step 3/3</p>
           </div>
 
@@ -74,7 +74,7 @@ export default function GeneratedTicket() {
           </div>
 
           <div>
-            <h1 className='booked'>Your Ticket is Booked!</h1>
+            <h1 className='booked text-[24px] md:text-[32px]'>Your Ticket is Booked!</h1>
             <p className='check font-["Roboto"]'>Check your email for a copy or you can download</p>
           </div>
           
@@ -139,7 +139,7 @@ export default function GeneratedTicket() {
                     </div>
                   </div>
                   <div className='absolute flex flex-col items-center justify-center mx-auto bottom-5 '>
-                    <img src="/Bar code.svg" alt="" className='mx-auto flex items-center justify-center relative bottom-0 ml-3' />
+                    <img src="/BarCode.svg" alt="" className='mx-auto flex items-center justify-center relative bottom-0 ml-3' />
                   </div>
                 </div>
               </div>
